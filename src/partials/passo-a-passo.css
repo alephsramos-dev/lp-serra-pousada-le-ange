@@ -1,0 +1,233 @@
+.passos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    @media (max-width: 768px){
+        margin-bottom: 20px;
+    }
+}
+
+.progresso {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 2.5%;
+    gap: 20px;
+
+    @media (max-width: 768px){
+        height: auto;    
+        flex-direction: column;
+    }
+}
+
+.progresso aside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .progresso aside div {
+    width: 100%;
+    background-color: #ececec;
+    min-height: 350px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    transition: all .2s ease-in-out;
+
+    @media (max-width: 768px){
+        min-height: auto;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 400px; /* Ajuste conforme necessário */
+        height: 100%;
+        background-image: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0) 70%
+        );
+        top: 0;
+        left: -200px;
+        opacity: 0.5;
+        animation: shine 6.5s ease-out infinite;
+    }
+
+    &:hover {
+        transform: scale(0.98);
+        background-color: #e1e1e1;
+    }
+
+    @media (max-width: 768px){
+        width: 100%;  
+    }
+  }
+  
+  .progresso aside div::before {
+    content: '';
+    width: 10px;
+    height: 100px;
+    left: -5px;
+    top: 20px;
+    position: absolute;
+    background-color: var(--color--blue);
+    z-index: -1;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .progresso aside div > span {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .progresso aside div > span svg {
+    width: 45px;
+  }
+  
+  .progresso aside div h4 {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--font--comfortaa);
+    line-height: 110%;
+
+    @media (max-width: 768px){
+        font-size: 20px;    
+    }
+  }
+  
+  .progresso aside div p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 110%;
+
+    @media (max-width: 768px){
+        font-size: 16px;    
+    }
+  }
+  
+  .progresso aside div button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:hover i {
+        transform: rotate(45deg);
+    }
+
+    & span {
+        border-bottom: 1px solid var(--color--blue);
+        line-height: 100%;
+        font-size: 16px;
+        transition: all .2s ease-in-out;
+    }
+
+    & i {
+        transition: all .2 ease-in-out;
+    }
+  }
+
+.progresso-center, .progresso-card-invisible{
+    opacity: 0!important;
+
+    @media (max-width: 768px){
+        display: none!important;
+    }
+}
+
+.barra-de-progresso{
+    height: 100vh;
+    width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #DDDDDD50;
+
+    @media (max-width: 768px){
+        left: 7.5%;
+        top: 10vh;
+        height: 90vh;
+        transform: translateX(0);    
+    };
+
+
+
+    & > span {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #DDDDDD;
+        z-index: 1;
+        transition: background-color 0.3s ease, transform .3s ease;
+        border: 5px solid #fff;
+
+        @media (max-width: 768px){
+            width: 35px;
+            height: 35px;
+            font-size: 14px;
+            border: 3px solid #fff;
+        }
+    } 
+}
+
+.barra-de-progresso > span.filled {
+    background-color: var(--color--blue);
+    color: #fff;
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+.barra-de-progresso-fill{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color--blue);
+    transition: height .2s ease;
+    z-index: 0;
+}
+
+.progresso-center {
+    width: 20%!important;
+}
+
+.progresso-card-invisible{
+    width: 40%!important;
+}

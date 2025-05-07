@@ -1,0 +1,260 @@
+.depoimentos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    gap: 30px;
+}
+
+.depoimentosDois-splide {
+    height: 60vh;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 768px){
+        height: auto;     
+        align-items: center;           
+    }
+
+    & .splide__track {
+        width: 100%;
+        height: 100%;
+
+        & .splide__list{
+
+            & .splide__slide{
+                width: 100%;
+                height: 100%;
+                transition: all .2s ease-in-out;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 30px;
+
+                @media (max-width: 768px){
+                    flex-direction: column;    
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                & > figure {
+                    width: 60%;
+                    height: 100%;
+                    border-radius: 25px;
+
+                    @media (max-width: 768px){
+                        width: 100%;
+                        height: 275px;
+                    }
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 25px;
+                        object-fit: cover;
+                    }
+                }
+
+                & > aside {
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 50px;
+                    padding-top: 25px;
+                    position: relative;
+
+                    @media (max-width: 768px){
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        padding-top: 0;
+                        gap: 20px;
+                    }
+
+                    & p {
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 100%;
+
+                        @media (max-width: 768px){
+                            font-size: 18px;
+                        }
+                    }
+
+                    & > div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: -30px;
+                        gap: 15px;
+
+                        @media (max-width: 768px){
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                        }
+
+                        & figure {
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50px;
+                            overflow: hidden;
+                            
+                            &::after {
+                                content: "";
+                                border-radius: 50px;
+                                position: absolute;
+                                width: 100px; /* Ajuste conforme necessário */
+                                height: 100%;
+                                background-image: linear-gradient(
+                                  120deg,
+                                  rgba(255, 255, 255, 0) 30%,
+                                  rgba(255, 255, 255, 0.8),
+                                  rgba(255, 255, 255, 0) 70%
+                                );
+                                top: 0;
+                                left: -200px;
+                                opacity: 0.7;
+                                animation: shine 3.5s ease-out infinite;
+                            }
+
+                            @media (max-width: 768px){
+                                width: 45px;
+                                height: 45px;
+                            }
+
+                            & img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        & div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            gap: 5px;
+
+                            & h4 {
+                                font-size: 18px;
+                                font-weight: 500;
+
+                                @media (max-width: 768px){
+                                    font-size: 16px;
+                                }
+                            }
+
+                            & ul {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 2px;
+
+                                & li i {
+                                    color: #ecd400;
+                                    position: relative;
+                                    overflow: hidden;
+
+                                    &::after {
+                                        content: "";
+                                        border-radius: 50px;
+                                        position: absolute;
+                                        width: 100px; /* Ajuste conforme necessário */
+                                        height: 100%;
+                                        background-image: linear-gradient(
+                                          120deg,
+                                          rgba(255, 255, 255, 0) 30%,
+                                          rgba(255, 255, 255, 0.8),
+                                          rgba(255, 255, 255, 0) 70%
+                                        );
+                                        top: 0;
+                                        left: -200px;
+                                        opacity: 0.7;
+                                        animation: shine 10.5s ease-out infinite;
+                                    }
+                                }
+
+                                & li:nth-child(6){
+                                    padding-left: 5px;
+                                    font-weight: 500;
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.depoimentosDois-buttons {
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    @media (max-width: 768px){
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom: 0;              
+    }
+
+    & .depoimentosDois-btnNext,
+    .depoimentosDois-btnPrev {
+        border: none;
+        background-color: #E9E9E9;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            transform: scale(0.98);
+        }
+
+        & i {
+            font-size: 16px;
+            display: contents;
+            fill: #353535;
+        }
+    }
+
+    & .depoimentosDois-btnPrev{
+        left: 0px;
+        position: absolute;
+
+        @media (max-width: 768px){
+            position: relative;
+            left: -5px;            
+        }
+    }
+
+    & .depoimentosDois-btnNext{
+        left: 50px;
+        position: absolute;
+
+        @media (max-width: 768px){
+            position: relative;
+            left: 5px;            
+        }
+    }
+}

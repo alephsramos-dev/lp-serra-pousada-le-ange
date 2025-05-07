@@ -1,0 +1,3 @@
+User-agente: *
+Allow: /
+Sitemap: https://buzios.pousadaleange.com.br/sitemap.xml

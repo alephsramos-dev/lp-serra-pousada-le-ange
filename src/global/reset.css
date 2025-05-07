@@ -1,0 +1,79 @@
+/*
+   reset.css v2.1 - Adaptado para iPhone
+   Baseado no reset de Meyer: http://meyerweb.com/eric/tools/css/reset/
+   License: Public Domain
+*/
+
+/* Reset geral para todos os elementos */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Exibição dos elementos HTML5 para navegadores antigos */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Configuração base do body com ajustes para iPhone */
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%; /* Evita o redimensionamento automático de fontes no iOS */
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque de toque em iOS */
+}
+
+/* Remoção dos marcadores de listas */
+ol, ul {
+    list-style: none;
+}
+
+/* Remoção das citações automáticas em blockquote e q */
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* Reset em tabelas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Ajustes específicos para formulários no iPhone */
+input, textarea, select, button {
+    -webkit-appearance: none; /* Remove estilos padrões do iOS */
+    border-radius: 0;         /* Remove bordas arredondadas automáticas */
+    outline: none;
+}
+
+/* Correção de fundo em inputs preenchidos pelo autofill no Safari */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Desabilitar o menu de toque (callout) em links, evitando a exibição de atalhos de cópia/definição */
+a {
+    -webkit-touch-callout: none;
+    color: inherit;
+}
