@@ -1,6 +1,6 @@
-# Landing Page Le Ange Mar
+# Landing Page Le Ange Serra
 
-Página estática criada para captação de leads da pousada **Le Ange Mar** (Búzios/RJ).
+Página estática criada para captação de leads da pousada **Le Ange Serra** (Miguel Pereira/RJ).
 
 ---
 
@@ -9,7 +9,7 @@ Página estática criada para captação de leads da pousada **Le Ange Mar** (B�
 Esta landing page apresenta os principais diferenciais da pousada e direciona visitantes a preencher um formulário de contato, com foco em conversão.
 
 Demo:  
-https://alephsramos-dev.github.io/buzios-pousada-le-ange-lp/
+https://alephsramos-dev.github.io/lp-serra-pousada-le-ange/
 
 ---
 
@@ -56,7 +56,7 @@ index.html          # Ponto de entrada
 
 1. **Clone**  
    ```bash
-   git clone https://github.com/alephsramos-dev/buzios-pousada-le-ange-lp.git
+   git clone https://github.com/alephsramos-dev/lp-serra-pousada-le-ange.git
    ```
 2. **Abra**  
    - Dê duplo clique em `src/index.html`  
